@@ -1,8 +1,8 @@
 <?php
 /**
- * Zend Framework 2 - PHP-Magazin Event-Manager
+ * Zend Framework 2 - PHP-Magazin Service-Manager
  *
- * Beispiele für ZF2 Event-Manager
+ * Beispiele für ZF2 Service-Manager
  *
  * @package    Application
  * @author     Ralf Eggert <r.eggert@travello.de>

@@ -1,8 +1,8 @@
 <?php
 /**
- * Zend Framework 2 - PHP-Magazin Event-Manager
+ * Zend Framework 2 - PHP-Magazin Service-Manager
  *
- * Beispiele für ZF2 Event-Manager
+ * Beispiele für ZF2 Service-Manager
  *
  * @package    Application
  * @author     Ralf Eggert <r.eggert@travello.de>
@@ -14,8 +14,6 @@
  */
 namespace Application;
 
-use Application\Listener\I18nListener;
-use Application\Listener\ViewListener;
 use Zend\EventManager\EventInterface;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\BootstrapListenerInterface;
@@ -36,7 +34,7 @@ class Module implements
     /**
      * Listen to the bootstrap event
      *
-     * @param MvcEvent $e
+     * @param EventInterface $e
      *
      * @return void
      */
@@ -46,10 +44,6 @@ class Module implements
         $eventManager = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
-
-        // attach I18n Listener
-        $eventManager->attachAggregate(new I18nListener());
-        $eventManager->attachAggregate(new ViewListener());
     }
 
     /**

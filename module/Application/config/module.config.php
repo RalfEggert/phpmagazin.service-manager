@@ -1,8 +1,8 @@
 <?php
 /**
- * Zend Framework 2 - PHP-Magazin Event-Manager
+ * Zend Framework 2 - PHP-Magazin Service-Manager
  *
- * Beispiele für ZF2 Event-Manager
+ * Beispiele für ZF2 Service-Manager
  *
  * @package    Application
  * @author     Ralf Eggert <r.eggert@travello.de>
@@ -27,27 +27,12 @@ return array(
                     ),
                 ),
             ),
-            'i18n' => array(
-                'type'    => 'Segment',
-                'options' => array(
-                    'route'    => '/i18n[/:lang]',
-                    'defaults' => array(
-                        'controller' => 'i18n',
-                        'action'     => 'index',
-                        'lang'       => 'de',
-                    ),
-                    'constraints' => array(
-                        'lang'  => '[a-z]{2}'
-                    ),
-                ),
-            ),
         ),
     ),
 
     'controllers'     => array(
         'invokables' => array(
             'index' => 'Application\Controller\IndexController',
-            'i18n'  => 'Application\Controller\I18nController',
         ),
     ),
 
@@ -57,11 +42,8 @@ return array(
         'doctype'                  => 'HTML5',
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
-        'template_map'             => include
-                __DIR__ . '/../view/template_map.php',
-        'template_path_stack'      => array(
-            __DIR__ . '/../view',
-        ),
+        'template_map'             => include __DIR__ . '/../template_map.php',
+        'template_path_stack'      => array(__DIR__ . '/../view'),
     ),
 
     'service_manager' => array(

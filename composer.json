@@ -1,8 +1,8 @@
 {
 	"keywords" : [],
 	"require" : {
-		"php" : ">=5.3.3",
-		"zendframework/zendframework" : "2.2.*",
+		"php" : ">=5.3.23",
+		"zendframework/zendframework" : "2.3.*",
 		"zendframework/zend-developer-tools" : "dev-master"
     }
 }
