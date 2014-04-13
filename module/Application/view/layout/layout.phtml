@@ -65,6 +65,9 @@ $this->inlineScript()->prependFile('/js/jquery-2.0.3.min.js', 'text/javascript')
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="<?php echo $this->url('home'); ?>">Startseite</a></li>
+                    <li><a href="<?php echo $this->url('shop'); ?>">Shop</a></li>
+                    <li><a href="<?php echo $this->url('shop/index', array('action' => 'show')); ?>">SmallPinkPrincessBike</a></li>
+                    <li><a href="<?php echo $this->url('shop/index', array('action' => 'special')); ?>">SpecialBike</a></li>
                 </ul>
             </div>
         </nav>
@@ -87,7 +90,7 @@ $this->inlineScript()->prependFile('/js/jquery-2.0.3.min.js', 'text/javascript')
                 </p>
                 <p>
                     <a href="https://plus.google.com/105130475645941839411" target="_blank" class="btn btn-default">Feedback erwünscht!</a>
-                    <a href="https://github.com/RalfEggert/phpmagazin.event-manager" target="_blank" class="btn btn-default">GitHub
+                    <a href="https://github.com/RalfEggert/phpmagazin.service-manager" target="_blank" class="btn btn-default">GitHub
                         Repository</a>
                 </p>
             </div>

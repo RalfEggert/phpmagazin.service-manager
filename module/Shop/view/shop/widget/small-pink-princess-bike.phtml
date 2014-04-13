@@ -1,0 +1,26 @@
+<?php
+/**
+ * Zend Framework 2 - PHP-Magazin Service-Manager
+ *
+ * Beispiele für ZF2 Service-Manager
+ *
+ * @package    Shop
+ * @author     Ralf Eggert <r.eggert@travello.de>
+ * @link       http://www.ralfeggert.de/
+ */
+
+/**
+ * namespace definition and usage
+ */
+use Shop\Entity\BikeInterface;
+
+$entity = $this->entity; /* @var $entity BikeInterface */
+?>
+<div class="well well-lg">
+    <h2><?php echo $entity->getName() ?></h2>
+    <p class="col-md-3">Farbe: <?php echo $entity->getColour() ?></p>
+    <p class="col-md-3">Klingel: <?php echo $entity->getBell()->getName() ?></p>
+    <p class="col-md-3">Vorderrad: <?php echo $entity->getFrontWheel()->getName() ?></p>
+    <p class="col-md-3">Hinterrad: <?php echo $entity->getBackWheel()->getName() ?></p>
+    <br>
+</div>
